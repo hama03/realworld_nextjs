@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { getCookieValue } from "@/lib/actions";
+import { useRouter } from "next/router";
 
 export default function ArticleForm({ originalTitle, originalDescription, originalBody, originalTagList, endpoint, method }) {
   const [title, setTitle] = useState(originalTitle);
@@ -25,7 +24,6 @@ export default function ArticleForm({ originalTitle, originalDescription, origin
       }
     }
 
-    const token = await getCookieValue("token");
     const res = await fetch(endpoint, {
       method: method,
       headers: {
