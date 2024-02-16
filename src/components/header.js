@@ -1,14 +1,8 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
-  const [username, setUsername] = useState("");
-
-  useEffect(() => {
-    getCookieValue("username").then(value => { setUsername(value) });
-  });
+  const [username] = useState("");
 
   return (
     <nav className="navbar navbar-light">

@@ -1,9 +1,7 @@
-"use client";
-
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import Link from "next/link";
-import { getCookieValue } from "@/lib/actions";
+
 
 export default function Article({ params }) {
   const [article, setArticle] = useState({
